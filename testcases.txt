@@ -1,0 +1,30 @@
+// SAMPLE TEST CASES FOR P1 - SHELL PROGRAM
+
+// NOTE : shell program must include '/bin' directory in its path initially
+
+// interactive mode
+prompt> ./dash
+dash> echo hello
+dash> sleep 4
+dash> pwd
+dash> ls -l & ps -u
+dash> ls & ps & cat filename.ext
+dash> ls -l & cat hello.txt & ps -u & sleep 4 & pwd & echo hello > hello.txt
+dash> ls > file1.txt & ps > file2.txt & pwd > file3.txt & echo hello > file4.txt
+dash> ls > output.ext
+dash> path /usr /usr/bin
+dash> cd ../dir_name
+dash> exit
+
+// batch mode
+prompt> ./dash commands.txt			// 'exit' command not mandatory
+prompt> ./dash < commands.txt 		// with redirection - commands.txt must contain 'exit' command for proper termination
+
+// NOTE : your shell program's output must be identical for both the batch inputs above
+
+//sample batch input file: commands.txt
+echo hello world
+sleep 4
+ls & ps -u
+cat filename.ext
+echo hi > output.ext
